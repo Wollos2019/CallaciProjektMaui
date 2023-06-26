@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="CallaciProjektMaui.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:CallaciProjektMaui"
+    xmlns:pages="clr-namespace:CallaciProjektMaui.Views"
+    Shell.FlyoutBehavior="Flyout">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <ShellContent
+        Title="QuizView"
+        ContentTemplate="{DataTemplate pages:QuizView}"
+        Route="QuizView" />
+
+    <ShellContent
+        Title="AdminView"
+        ContentTemplate="{DataTemplate pages:AdminView}"
+        Route="AdminView" />
+
+    <ShellContent
+        Title="AllDataPages"
+        ContentTemplate="{DataTemplate pages:ShowDataView}"
+        Route="ShowDataView" />
+
+</Shell>
