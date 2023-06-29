@@ -1,5 +1,6 @@
 ﻿using CallaciProjektMaui.Helpers;
 using CallaciProjektMaui.Repositories;
+using CallaciProjektMaui.ViewModels;
 using Microsoft.Extensions.Logging;
 
 namespace CallaciProjektMaui;
@@ -23,6 +24,7 @@ public static class MauiProgram
 
         string dbPath = FileAccessHelper.GetLocalFilePath("quizapp.db3");
         builder.Services.AddSingleton<QuestionRepository>(s => ActivatorUtilities.CreateInstance<QuestionRepository>(s, dbPath));
+        builder.Services.AddSingleton<QuestionViewModel>();
 
         return builder.Build();
 	}

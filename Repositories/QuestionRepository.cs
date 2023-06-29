@@ -105,7 +105,7 @@ namespace CallaciProjektMaui.Repositories
             return new List<Question>();
         }
 
-        public async Task removePeople(int id)
+        public async Task removeQuestion(int id)
         {
             try
             {
